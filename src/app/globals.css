@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: 20 184 166;
+  --color-secondary: 6 182 212;
+  --color-accent: 14 165 233;
+  --color-background: 240 253 250;
+  --color-text: 31 41 55;
+}
+
+body {
+  color: rgb(var(--color-text));
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-background)),
+    rgb(var(--color-background) / 0.8),
+    rgb(var(--color-secondary) / 0.2)
+  );
+  min-height: 100vh;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold py-2 px-4 rounded-md hover:from-teal-600 hover:to-cyan-600 transition-all duration-200;
+  }
+}
+
+input[type="number"],
+input[type="text"],
+textarea {
+  @apply shadow-md;
+}
+
+button {
+  @apply shadow-md hover:shadow-lg;
+}
+
+* {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  @apply ring-4 ring-teal-300 ring-opacity-50 outline-none;
+}
+
+button:hover {
+  @apply transform scale-105;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
