@@ -79,4 +79,4 @@ Este aplicativo não substitui a consulta médica presencial. As sugestões forn
 
 ## Licença 📝
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
